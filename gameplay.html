@@ -1,0 +1,52 @@
+<script>
+    var cookies = 0
+    var min_cost = 150
+    var max_cost = 250
+    var max_cpc = 30
+    var min_cpc = 15
+    var cost = 30
+    var cpc = 1
+    function load_text() {
+        document.getElementById("score_text").value = cookies
+        document.getElementById("cost_text").value = cost
+        document.getElementById("cpc_text").value = cpc
+    }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="gameplay.js"></script>
+    <style>
+        .saveandload {
+            position: absolute;
+            top: 90%;
+            left: 45%;
+        }
+        #upgrade_button {
+            position: absolute;
+            top: 75%;
+            left: 48%;
+        }
+    </style>
+</head>
+<body onload="load_text()">
+    <a href=# style="position: absolute; top: 30%; left: 45%;" onclick="add()"><img src="cookie-removebg-preview.png" alt=""></a>
+    <input type="text" id="score_text" disabled style="text-align: center; position: absolute; top: 55%; left: 44%;">
+    <br><br>
+    <label for=""  style="position: absolute; top: 65%; left: 40%;">Cost:</label>
+    <input type="text" id="cost_text" disabled style="text-align: center; position: absolute; top: 65%; left: 44%;">
+    <br><br>
+    <label for=""  style="position: absolute; top: 70%; left: 35%;">Cookie Per Click:</label>
+    <input type="text" id="cpc_text" disabled style="text-align: center; position: absolute; top: 70%; left: 44%;">
+    <br><br><br><br>
+    <div class="saveandload">
+        <button onclick="save()">Save</button>
+        <button onclick="load()">Load</button>
+    </div>
+    <button onclick="upgrade()" id="upgrade_button">Upgrade</button>
+</body>
+</html>
